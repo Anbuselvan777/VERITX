@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VERITX | Behavioral Intelligence Console</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div class="ambient ambient-a"></div>
+      <div class="ambient ambient-b"></div>
+
+      <header class="topbar panel">
+        <div class="brand-block">
+          <p class="eyebrow">VERITX Behavioral Intelligence Platform</p>
+          <h1>VERITX Console</h1>
+          <p class="lede">
+            Production-grade interaction analysis with adaptive baselines, evidence-aware anomaly
+            detection, calibrated confidence, and an explainable decision trace.
+          </p>
+        </div>
+
+        <div class="topbar-controls">
+          <label class="profile-field">
+            <span>Profile</span>
+            <input id="profileId" type="text" value="default" maxlength="24" />
+          </label>
+
+          <div class="status-stack">
+            <div class="live-chip">
+              <span class="chip-dot" id="liveDot"></span>
+              <span id="sessionStatus">Idle</span>
+            </div>
+            <p id="sessionMeta">No active session</p>
+          </div>
+
+          <div class="button-row">
+            <button id="startSessionBtn" class="primary">Start Session</button>
+            <button id="finalizeBtn" class="ghost">Analyze Session</button>
+          </div>
+        </div>
+      </header>
+
+      <main class="dashboard-grid">
+        <section class="panel workspace-panel">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Live Capture Workspace</p>
+              <h2>Interaction Sandbox</h2>
+            </div>
+            <div class="sim-buttons">
+              <button data-simulate="human">Simulate Human</button>
+              <button data-simulate="expert">Simulate Expert</button>
+              <button data-simulate="automation">Simulate Automation</button>
+            </div>
+          </div>
+
+          <div class="workspace-layout">
+            <article class="reading-surface">
+              <p class="surface-kicker">Reading Surface</p>
+              <h3>Incident Review Brief</h3>
+              <p>
+                A browser-based workflow was observed with unusually low hesitation and highly regular
+                click cadence. Review the summary, consider the timing patterns, and submit a short
+                interpretation of whether the interaction appears human, expert-driven, or automated.
+              </p>
+              <p>
+                VERITX expects natural sessions to include a reading phase, micro-pauses, occasional
+                corrections, and non-uniform mouse movement. The system now backs off when the session
+                is too thin, keeping weak evidence from turning into overconfident conclusions.
+              </p>
+              <ul class="reading-points">
+                <li>Look for timing irregularity, not just speed.</li>
+                <li>Consider if the sequence follows READ -&gt; PAUSE -&gt; TYPE -&gt; CORRECT -&gt; SUBMIT.</li>
+                <li>Use the dashboard to compare risk, confidence, evidence quality, and counterfactuals.</li>
+              </ul>
+            </article>
+
+            <div class="interaction-surface">
+              <div class="field-group">
+                <label for="responseTitle">Assessment Title</label>
+                <input id="responseTitle" type="text" placeholder="Example: Session shows moderate automation risk" />
+              </div>
+
+              <div class="field-group">
+                <label for="responseBody">Analyst Notes</label>
+                <textarea
+                  id="responseBody"
+                  placeholder="Type your interpretation here. Include reasoning, uncertainty, and any observed anomalies."
+                ></textarea>
+              </div>
+
+              <div class="field-group dual">
+                <label for="decisionSelect">Disposition</label>
+                <select id="decisionSelect">
+                  <option value="human">Likely Human</option>
+                  <option value="mixed">Mixed / Uncertain</option>
+                  <option value="automation">Likely Automation</option>
+                </select>
+              </div>
+
+              <button id="submitObservationBtn" class="primary wide">Submit Observation</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel metrics-panel">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Session Report</p>
+              <h2>Risk Calibration</h2>
+            </div>
+            <p id="generatedAt" class="muted">Waiting for live analysis</p>
+          </div>
+
+          <div class="hero-metrics">
+            <div class="metric-card metric-human">
+              <span>Human Likelihood</span>
+              <strong id="humanLikelihood">0%</strong>
+            </div>
+            <div class="metric-card metric-risk">
+              <span>Automation Risk</span>
+              <strong id="automationRisk">0%</strong>
+            </div>
+            <div class="metric-card metric-confidence">
+              <span>Confidence</span>
+              <strong id="confidenceLabel">LOW</strong>
+            </div>
+          </div>
+
+          <div class="summary-grid">
+            <div class="summary-card">
+              <h3>Context</h3>
+              <p id="contextSummary">No session analyzed yet.</p>
+            </div>
+            <div class="summary-card">
+              <h3>Sequence</h3>
+              <p id="sequenceSummary">Read, pause, type, correct, and submit steps will appear here.</p>
+            </div>
+            <div class="summary-card">
+              <h3>Interpretation</h3>
+              <p id="interpretationSummary">Evidence-aware explanations will update when events are processed.</p>
+            </div>
+            <div class="summary-card">
+              <h3>Session Stats</h3>
+              <p id="statsSummary">No captured activity.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel charts-panel">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Visualization</p>
+              <h2>Behavior Graphs</h2>
+            </div>
+          </div>
+
+          <div class="charts-grid">
+            <div class="chart-card">
+              <h3>Activity Timeline</h3>
+              <canvas id="timelineChart"></canvas>
+              <p id="timelineNote" class="chart-note">Event timing and spikes will appear once the session has enough evidence.</p>
+            </div>
+            <div class="chart-card">
+              <h3>Timing Distribution</h3>
+              <canvas id="distributionChart"></canvas>
+              <p id="distributionNote" class="chart-note">Relative spread compares mean and p90 values so different signals stay readable.</p>
+            </div>
+            <div class="chart-card wide-card">
+              <h3>Feature Importance</h3>
+              <canvas id="featureChart"></canvas>
+              <p id="featureNote" class="chart-note">Top weighted features will appear after the optimizer scores the session.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel explain-panel">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Explainability Engine</p>
+              <h2>Layered Reasons</h2>
+            </div>
+          </div>
+
+          <div class="explain-layout">
+            <div class="layer-card">
+              <h3>Layer 1: Rules</h3>
+              <ul id="ruleLayer" class="reason-list"></ul>
+            </div>
+            <div class="layer-card">
+              <h3>Layer 2: Statistical</h3>
+              <ul id="statLayer" class="reason-list"></ul>
+            </div>
+            <div class="layer-card">
+              <h3>Layer 3: Context</h3>
+              <ul id="contextLayer" class="reason-list"></ul>
+            </div>
+            <div class="layer-card">
+              <h3>Counterfactual</h3>
+              <ul id="counterfactualLayer" class="reason-list"></ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel heatmap-panel">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Density Mapping</p>
+              <h2>Interaction Heatmap</h2>
+            </div>
+          </div>
+
+          <canvas id="heatmapCanvas" width="640" height="340"></canvas>
+        </section>
+
+        <section class="panel event-panel">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Event Stream</p>
+              <h2>Live Activity Feed</h2>
+            </div>
+          </div>
+          <div id="eventFeed" class="event-feed"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/vendor/chart.umd.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

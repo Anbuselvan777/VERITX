@@ -1,0 +1,392 @@
+{
+  "profiles": {
+    "default": {
+      "profileId": "default",
+      "sessions": 33,
+      "features": {
+        "clickIntervalMean": {
+          "count": 43,
+          "mean": 396.7441860465117,
+          "m2": 7274744.186046511,
+          "variance": 169180.09734991885,
+          "stdDev": 411.31508281355167,
+          "min": 0,
+          "max": 2100
+        },
+        "clickIntervalVariance": {
+          "count": 43,
+          "mean": 8372.093023255815,
+          "m2": 3646046511.6279063,
+          "variance": 84791779.34018387,
+          "stdDev": 9208.245182453813,
+          "min": 0,
+          "max": 52000
+        },
+        "typingSpeed": {
+          "count": 43,
+          "mean": 5.075734926325293,
+          "m2": 2457.303057703375,
+          "variance": 57.146582737287794,
+          "stdDev": 7.559535881076814,
+          "min": 0,
+          "max": 30.357142857142854
+        },
+        "hesitationTime": {
+          "count": 43,
+          "mean": 178.86046511627902,
+          "m2": 2057389.1627906978,
+          "variance": 47846.25959978367,
+          "stdDev": 218.73787874939188,
+          "min": 0,
+          "max": 1500
+        },
+        "correctionRate": {
+          "count": 43,
+          "mean": 0.047674418604651145,
+          "m2": 0.1298924418604651,
+          "variance": 0.0030207544618712817,
+          "stdDev": 0.054961390647174146,
+          "min": 0,
+          "max": 0.4
+        },
+        "idleMean": {
+          "count": 43,
+          "mean": 739.6744186046511,
+          "m2": 22203853.441860467,
+          "variance": 516368.68469442945,
+          "stdDev": 718.587979787047,
+          "min": 0,
+          "max": 5000
+        },
+        "mouseMovementEntropy": {
+          "count": 43,
+          "mean": 1.4478611050994392,
+          "m2": 65.07536579693196,
+          "variance": 1.5133805999286503,
+          "stdDev": 1.2301953503117504,
+          "min": 0,
+          "max": 4
+        },
+        "readingTime": {
+          "count": 43,
+          "mean": 1353.7906976744187,
+          "m2": 78139273.11627907,
+          "variance": 1817192.3980530016,
+          "stdDev": 1348.0327881965636,
+          "min": 0,
+          "max": 12000
+        },
+        "sequenceAnomaly": {
+          "count": 43,
+          "mean": 0.4863565891472868,
+          "m2": 4.042754142277067,
+          "variance": 0.09401753819248992,
+          "stdDev": 0.30662279463942327,
+          "min": 0,
+          "max": 1
+        },
+        "transitionVolatility": {
+          "count": 43,
+          "mean": 0.5240310077519379,
+          "m2": 5.388029636660867,
+          "variance": 0.12530301480606668,
+          "stdDev": 0.35398165885546484,
+          "min": 0,
+          "max": 1
+        }
+      },
+      "lastUpdatedAt": "2026-03-28T06:28:09.565Z"
+    },
+    "verification": {
+      "profileId": "verification",
+      "sessions": 1,
+      "features": {
+        "clickIntervalMean": {
+          "count": 10,
+          "mean": 0,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 0,
+          "max": 0
+        },
+        "clickIntervalVariance": {
+          "count": 10,
+          "mean": 0,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 0,
+          "max": 0
+        },
+        "typingSpeed": {
+          "count": 10,
+          "mean": 6.451612903225807,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 6.451612903225807,
+          "max": 6.451612903225807
+        },
+        "hesitationTime": {
+          "count": 10,
+          "mean": 400,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 400,
+          "max": 400
+        },
+        "correctionRate": {
+          "count": 10,
+          "mean": 0.3333333333333333,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 0.3333333333333333,
+          "max": 0.3333333333333333
+        },
+        "idleMean": {
+          "count": 10,
+          "mean": 360,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 360,
+          "max": 360
+        },
+        "mouseMovementEntropy": {
+          "count": 10,
+          "mean": 0,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 0,
+          "max": 0
+        },
+        "readingTime": {
+          "count": 10,
+          "mean": 1051,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 1051,
+          "max": 1051
+        },
+        "sequenceAnomaly": {
+          "count": 10,
+          "mean": 0.2833333333333334,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 0.2833333333333334,
+          "max": 0.2833333333333334
+        },
+        "transitionVolatility": {
+          "count": 10,
+          "mean": 0.8333333333333334,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 0.8333333333333334,
+          "max": 0.8333333333333334
+        }
+      },
+      "lastUpdatedAt": "2026-03-26T09:51:47.530Z"
+    },
+    "verify-ui": {
+      "profileId": "verify-ui",
+      "sessions": 1,
+      "features": {
+        "clickIntervalMean": {
+          "count": 2,
+          "mean": 0,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 0,
+          "max": 0
+        },
+        "clickIntervalVariance": {
+          "count": 2,
+          "mean": 0,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 0,
+          "max": 0
+        },
+        "typingSpeed": {
+          "count": 2,
+          "mean": 6.521739130434782,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 6.521739130434782,
+          "max": 6.521739130434782
+        },
+        "hesitationTime": {
+          "count": 2,
+          "mean": 520,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 520,
+          "max": 520
+        },
+        "correctionRate": {
+          "count": 2,
+          "mean": 0.25,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 0.25,
+          "max": 0.25
+        },
+        "idleMean": {
+          "count": 2,
+          "mean": 420,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 420,
+          "max": 420
+        },
+        "mouseMovementEntropy": {
+          "count": 2,
+          "mean": 0,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 0,
+          "max": 0
+        },
+        "readingTime": {
+          "count": 2,
+          "mean": 1320,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 1320,
+          "max": 1320
+        },
+        "sequenceAnomaly": {
+          "count": 2,
+          "mean": 0.2833333333333334,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 0.2833333333333334,
+          "max": 0.2833333333333334
+        },
+        "transitionVolatility": {
+          "count": 2,
+          "mean": 0.8333333333333334,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 0.8333333333333334,
+          "max": 0.8333333333333334
+        }
+      },
+      "lastUpdatedAt": "2026-03-26T09:53:34.297Z"
+    },
+    "execution-check": {
+      "profileId": "execution-check",
+      "sessions": 2,
+      "features": {
+        "clickIntervalMean": {
+          "count": 4,
+          "mean": 0,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 0,
+          "max": 0
+        },
+        "clickIntervalVariance": {
+          "count": 4,
+          "mean": 0,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 0,
+          "max": 0
+        },
+        "typingSpeed": {
+          "count": 4,
+          "mean": 6.521739130434782,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 6.521739130434782,
+          "max": 6.521739130434782
+        },
+        "hesitationTime": {
+          "count": 4,
+          "mean": 520,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 520,
+          "max": 520
+        },
+        "correctionRate": {
+          "count": 4,
+          "mean": 0.25,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 0.25,
+          "max": 0.25
+        },
+        "idleMean": {
+          "count": 4,
+          "mean": 420,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 420,
+          "max": 420
+        },
+        "mouseMovementEntropy": {
+          "count": 4,
+          "mean": 0,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 0,
+          "max": 0
+        },
+        "readingTime": {
+          "count": 4,
+          "mean": 1320,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 1320,
+          "max": 1320
+        },
+        "sequenceAnomaly": {
+          "count": 4,
+          "mean": 0.2833333333333334,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 0.2833333333333334,
+          "max": 0.2833333333333334
+        },
+        "transitionVolatility": {
+          "count": 4,
+          "mean": 0.8333333333333334,
+          "m2": 0,
+          "variance": 0,
+          "stdDev": 0,
+          "min": 0.8333333333333334,
+          "max": 0.8333333333333334
+        }
+      },
+      "lastUpdatedAt": "2026-03-26T10:10:44.429Z"
+    }
+  }
+}

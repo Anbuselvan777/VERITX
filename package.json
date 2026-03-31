@@ -1,0 +1,15 @@
+{
+  "name": "veritx",
+  "version": "1.0.0",
+  "private": true,
+  "description": "VERITX behavior intelligence platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "chart.js": "^4.5.0",
+    "express": "^4.21.2"
+  }
+}
